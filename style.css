@@ -1,0 +1,48 @@
+/* Variables */
+:root {
+  /* Backgrounds */
+  --color-background-light: #F2E8CF;   
+  --color-box-light: #C2A878;      
+
+  /* Text */
+  --color-text-primary-light: #3E3A34; 
+  --color-text-light: #F9F5EB;
+
+  /* Titles & Headers */
+  --color-title-light: #4F6F52;       
+  --color-header-light: #7A9E7E;       
+
+  /* Borders & Accents */
+  --color-border-light: #8B6F47;       
+  --color-highlight-light: #5F7C8A;   
+}
+
+/* Dark themed  */
+.dark {
+     /* Backgrounds */
+  --color-background-dark: #2E2A25;   
+  --color-box-dark: #4A4033;          
+
+  /* Text */
+  --color-text-primary-dark: #E6DDC6; 
+
+  /* Titles & Headers */
+  --color-title-dark: #7A9E7E;        
+  --color-header-dark: #A3B18A;       
+
+  /* Borders & Accents */
+  --color-border-dark: #A68A64;       
+  --color-highlight-dark: #7D9AA8;   
+}
+
+/* Title is going to be centered in the middle */
+.title {
+    display: flex;
+    justify-content: center;    
+  text-align: center;
+  color: var(--color-title);
+}
+
+.dark .title {
+    color: var(--color-title);
+}
