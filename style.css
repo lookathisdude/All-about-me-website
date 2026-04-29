@@ -1,48 +1,98 @@
-/* Variables */
+/*  LIGHT THEME (default theme) */
 :root {
   /* Backgrounds */
-  --color-background-light: #F2E8CF;   
-  --color-box-light: #C2A878;      
+  --color-background: #f2e8cf;
+  --color-box: #d9c6a3;
 
   /* Text */
-  --color-text-primary-light: #3E3A34; 
-  --color-text-light: #F9F5EB;
+  --color-text-primary: #3e3a34;
+  --color-text-light: #f9f5eb;
 
   /* Titles & Headers */
-  --color-title-light: #4F6F52;       
-  --color-header-light: #7A9E7E;       
+  --color-title: #4f6f52;
+  --color-header: #7a9e7e;
 
   /* Borders & Accents */
-  --color-border-light: #8B6F47;       
-  --color-highlight-light: #5F7C8A;   
+  --color-border: #8b6f47;
+  --color-highlight: #5f7c8a;
+
+  /* Fonts */
+  --font-primary: "Playfair Display", serif;
+  --font-secondary: "Roboto", sans-serif;
 }
 
-/* Dark themed  */
+/*  DARK THEME */
 .dark {
-     /* Backgrounds */
-  --color-background-dark: #2E2A25;   
-  --color-box-dark: #4A4033;          
+  /* Backgrounds */
+  --color-background: #2e2a25;
+  --color-box: #3f362d;
 
   /* Text */
-  --color-text-primary-dark: #E6DDC6; 
+  --color-text-primary: #e6ddc6;
 
   /* Titles & Headers */
-  --color-title-dark: #7A9E7E;        
-  --color-header-dark: #A3B18A;       
+  --color-title: #7a9e7e;
+  --color-header: #a3b18a;
 
   /* Borders & Accents */
-  --color-border-dark: #A68A64;       
-  --color-highlight-dark: #7D9AA8;   
+  --color-border: #a68a64;
+  --color-highlight: #7d9aa8;
 }
 
-/* Title is going to be centered in the middle */
+/* transition for theme changing */
+body {
+  transition: background-color 0.3s, ease, color 0.3s, ease;
+  background-color: var(--color-background);
+  font-family: var(--font-secondary);
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+/* Title centered */
+/* Container (layout only) */
 .title {
-    display: flex;
-    justify-content: center;    
-  text-align: center;
-  color: var(--color-title);
+  width: 100%;
+  background-color: var(--color-box);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 20px;
+  margin: 0;
 }
 
-.dark .title {
-    color: var(--color-title);
+/* H1 (text styling only) */
+.title h1 {
+  font-family: var(--font-primary);
+  font-size: 150px;
+  padding: 20px;
+  color: var(--color-title);
+
+  margin: 0;
+}
+.theme-button {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  padding: 10px 20px;
+  border-radius: 100px;
+  background-color: var(--color-highlight);
+  color: var(--color-text-light);
+  border: none;
+  cursor: pointer;
+
+  /* smooth transition */
+  transition: all 0.25s ease;
+}
+
+/* This is applied when hovered */
+.theme-button:hover {
+  background-color: var(--color-border);
+  color: var(--color-text-light);
+  cursor: pointer;
+
+  /* smooth transition */
+  transform: scale(1.15);
 }
